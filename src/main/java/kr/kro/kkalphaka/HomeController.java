@@ -31,7 +31,13 @@ public class HomeController {
 		
 		String formattedDate = dateFormat.format(date);
 		
-		return "main.tiles";
+		return "alphaka.dashboard";
 	}
 	
+	@RequestMapping(value = "/404", method = RequestMethod.GET)
+	public String err404(Locale locale, Model model) {
+		logger.info("Welcome home! The client locale is {}.", locale);
+				
+		return "alphaka.404";
+	}
 }

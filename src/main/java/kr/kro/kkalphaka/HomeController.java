@@ -1,16 +1,17 @@
 package kr.kro.kkalphaka;
 
-import java.text.DateFormat;
-import java.util.Date;
 import java.util.Locale;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import kr.kro.kkalphaka.tableVO.tableVO;
 /**
  * Handles requests for the application home page.
  */
@@ -26,10 +27,12 @@ public class HomeController {
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
 		
+		/*
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
 		
 		String formattedDate = dateFormat.format(date);
+		*/
 		
 		return "alphaka.dashboard";
 	}
@@ -77,9 +80,8 @@ public class HomeController {
 	}
 	
 	@RequestMapping(value = "/tables", method = RequestMethod.GET)
-	public String tables(Locale locale, Model model) {
+	public String tables(Locale locale, @ModelAttribute("msg") String msg) {		
 		logger.info("Welcome home! The client locale is {}.", locale);
-		
 		return "alphaka.tables";
 	}
 
@@ -122,5 +124,14 @@ public class HomeController {
 		logger.info("Welcome home! The client locale is {}.", locale);
 		
 		return "alphaka.components.cards";
+	}
+	
+	@RequestMapping(value = "/json", method = RequestMethod.GET)
+	public @ResponseBody tableVO json(Locale locale) {
+		logger.info("Welcome home! The client locale is {}.", locale);
+		
+		tableVO vo = new tableVO("ป๙วร",5);
+		
+		return vo;
 	}
 }

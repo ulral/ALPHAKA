@@ -9,7 +9,7 @@
 
 	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
 	
-	<!-- Enables the Spring MVC @Controller programming model -->
+	<!-- 스프링 MVC 어노테이션을 사용하도록 설정 -->
 	<annotation-driven />
 
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
@@ -38,8 +38,7 @@
 		<beans:property name="order" value="2" />
 	</beans:bean>
 		
+	<!-- 웹 앱 클래스가 포함된 패키지 -->	
 	<context:component-scan base-package="kr.kro.kkalphaka" />
-	
-	
-	
+		
 </beans:beans>

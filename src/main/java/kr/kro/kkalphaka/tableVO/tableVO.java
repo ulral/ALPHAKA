@@ -10,7 +10,6 @@ import lombok.ToString;
 @Setter
 @ToString
 @NoArgsConstructor
-@AllArgsConstructor
 public class tableVO {
 
 	private String name;

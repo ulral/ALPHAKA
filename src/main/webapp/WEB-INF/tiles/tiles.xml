@@ -28,6 +28,12 @@
 		<put-attribute name="body" value="/WEB-INF/views/pages/login.jsp" />
 	</definition>
 
+	<!-- 로그인포스트 -->
+	<definition name="alphaka.loginPost" extends="default_one">
+		<put-attribute name="title" value="COIN PPL - 로그인" type="string" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/loginPost.jsp" />
+	</definition>
+
 	<!-- 회원가입 -->
 	<definition name="alphaka.register" extends="default_one">
 		<put-attribute name="title" value="COIN PPL - 회원가입" type="string" />

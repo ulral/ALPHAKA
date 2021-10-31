@@ -37,8 +37,32 @@
 		<beans:property name="suffix" value=".jsp" />
 		<beans:property name="order" value="2" />
 	</beans:bean>
-		
-	<!-- 웹 앱 클래스가 포함된 패키지 -->	
+
+	<!-- ALPHAKA인터셉터를 활용할 URI 경로설정 -->
+	<beans:bean id="AlphakaInterceptor" class="kr.kro.kkalphaka.Interceptor.AlphakaInterceptor"></beans:bean>
+		<interceptors>
+			<interceptor>
+				<mapping path="/404"/>
+				<beans:ref bean="AlphakaInterceptor"/>
+			</interceptor>
+		</interceptors>
+
+	<beans:bean id="authInterceptor" class="kr.kro.kkalphaka.Interceptor.AuthInterceptor"></beans:bean>
+
+	<beans:bean id="loginInterceptor" class="kr.kro.kkalphaka.Interceptor.LoginInterceptor"></beans:bean>
+	<interceptors>
+		<interceptor>
+			<mapping path="/loginPost"/>
+			<beans:ref bean="loginInterceptor"/>
+		</interceptor>
+
+		<interceptor>
+			<mapping path="/"/>
+			<beans:ref bean="authInterceptor"/>
+		</interceptor>
+	</interceptors>
+
+	<!-- 웹 앱 클래스가 포함된 패키지 -->
 	<context:component-scan base-package="kr.kro.kkalphaka" />
 		
 </beans:beans>

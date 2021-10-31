@@ -19,7 +19,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="${pageContext.request.contextPath}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>대시보드</span></a>
+                    <span>MAIN</span></a>
             </li>
 
             <!-- Divider -->
@@ -27,7 +27,7 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Interface
+                menu
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -35,11 +35,11 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>Components</span>
+                    <span>Board</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
+                        <h6 class="collapse-header">Custom Board:</h6>
                         <a class="collapse-item" href="${pageContext.request.contextPath}/components/buttons">Buttons</a>
                         <a class="collapse-item" href="${pageContext.request.contextPath}/components/cards">Cards</a>
                     </div>
@@ -51,12 +51,12 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
-                    <span>Utilities</span>
+                    <span>API</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
+                        <h6 class="collapse-header">CUSTOM API:</h6>
                         <a class="collapse-item" href="${pageContext.request.contextPath}/utils/colors">Colors</a>
                         <a class="collapse-item" href="${pageContext.request.contextPath}/utils/borders">Borders</a>
                         <a class="collapse-item" href="${pageContext.request.contextPath}/utils/animations">Animations</a>
@@ -72,27 +72,6 @@
             <div class="sidebar-heading">
                 Addons
             </div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="${pageContext.request.contextPath}/login">Login</a>
-                        <a class="collapse-item" href="${pageContext.request.contextPath}/register">Register</a>
-                        <a class="collapse-item" href="${pageContext.request.contextPath}/forgotpassword">Forgot Password</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="${pageContext.request.contextPath}/404">404 Page</a>
-                        <a class="collapse-item" href="${pageContext.request.contextPath}/blank">Blank Page</a>
-                    </div>
-                </div>
-            </li>
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">

@@ -7,13 +7,13 @@
 
 	<!-- 기본 레이아웃  -->
 	<definition name="default_sidebar" template="/WEB-INF/views/layout/default/default_sidebar_page.jsp">
+		<put-attribute name="scripts" value="/WEB-INF/views/layout/temp_libraries.jsp" />
 		<put-attribute name="header" value="/WEB-INF/views/layout/header.jsp" />
 		<put-attribute name="top_navi" value="/WEB-INF/views/layout/top_navi.jsp" />
 		<put-attribute name="title" value="COIN PPL" type="string" />
 		<put-attribute name="body" value="" />
 		<put-attribute name="footer" value="/WEB-INF/views/layout/footer.jsp" />
-		<put-attribute name="scripts" value="/WEB-INF/views/layout/temp_libraries.jsp" />
-	</definition>	
+	</definition>
 
 	<!-- 메인 레이아웃  -->
 	<definition name="default_one" template="/WEB-INF/views/layout/default/default_one_page.jsp">
@@ -54,19 +54,46 @@
 		<put-attribute name="scroll_up" value="/WEB-INF/views/layout/scroll_up_button.jsp" />
 		<put-attribute name="logout_modal" value="/WEB-INF/views/layout/logout_modal.jsp" />
 	</definition>
-	
-	<!-- components-buttons -->
-	<definition name="alphaka.components.buttons" extends="default_sidebar">
+
+	<!-- page-board-tables -->
+	<definition name="alphaka.board.tables" extends="default_sidebar">
+		<put-attribute name="title" value="COIN PPL - 테이블" type="string" />
 		<put-attribute name="sidebar" value="/WEB-INF/views/layout/sidebar.jsp" />
-		<put-attribute name="body" value="/WEB-INF/views/components/buttons.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/boards/tables.jsp" />
+		<put-attribute name="scroll_up" value="/WEB-INF/views/layout/scroll_up_button.jsp" />
+		<put-attribute name="logout_modal" value="/WEB-INF/views/layout/logout_modal.jsp" />
+	</definition>
+
+	<!-- page-board-tables-regist -->
+	<definition name="alphaka.board.tables.registPage" extends="default_sidebar">
+		<put-attribute name="title" value="COIN PPL - 테이블" type="string" />
+		<put-attribute name="sidebar" value="/WEB-INF/views/layout/sidebar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/boards/registPage.jsp" />
+		<put-attribute name="scroll_up" value="/WEB-INF/views/layout/scroll_up_button.jsp" />
+		<put-attribute name="logout_modal" value="/WEB-INF/views/layout/logout_modal.jsp" />
+	</definition>
+
+	<!-- page-board-tables-regist-success -->
+	<definition name="alphaka.board.tables.registSuccess" extends="default_sidebar">
+		<put-attribute name="title" value="COIN PPL - 테이블" type="string" />
+		<put-attribute name="sidebar" value="/WEB-INF/views/layout/sidebar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/boards/registSuccess.jsp" />
+		<put-attribute name="scroll_up" value="/WEB-INF/views/layout/scroll_up_button.jsp" />
+		<put-attribute name="logout_modal" value="/WEB-INF/views/layout/logout_modal.jsp" />
+	</definition>
+
+	<!-- components-buttons -->
+	<definition name="alphaka.board.buttons" extends="default_sidebar">
+		<put-attribute name="sidebar" value="/WEB-INF/views/layout/sidebar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/boards/buttons.jsp" />
 		<put-attribute name="scroll_up" value="/WEB-INF/views/layout/scroll_up_button.jsp" />
 		<put-attribute name="logout_modal" value="/WEB-INF/views/layout/logout_modal.jsp" />
 	</definition>
 	
 	<!-- components-cards -->
-	<definition name="alphaka.components.cards" extends="default_sidebar">
+	<definition name="alphaka.board.cards" extends="default_sidebar">
 		<put-attribute name="sidebar" value="/WEB-INF/views/layout/sidebar.jsp" />
-		<put-attribute name="body" value="/WEB-INF/views/components/cards.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/boards/cards.jsp" />
 		<put-attribute name="scroll_up" value="/WEB-INF/views/layout/scroll_up_button.jsp" />
 		<put-attribute name="logout_modal" value="/WEB-INF/views/layout/logout_modal.jsp" />
 	</definition>
@@ -137,12 +164,12 @@
 	<definition name="alphaka.tables" extends="default_sidebar">
 		<put-attribute name="title" value="COIN PPL - 테이블" type="string" />
 		<put-attribute name="sidebar" value="/WEB-INF/views/layout/sidebar.jsp" />
-		<put-attribute name="body" value="/WEB-INF/views/pages/tables.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/boards/tables.jsp" />
 		<put-attribute name="scroll_up" value="/WEB-INF/views/layout/scroll_up_button.jsp" />
 		<put-attribute name="logout_modal" value="/WEB-INF/views/layout/logout_modal.jsp" />
 	</definition>
-	
-	
+
+
 	<!-- 타일즈 미 적용 
 	<definition name="normalLayout" template="/WEB-INF/jsp/layout/NormalLayout.jsp">
 		<put-attribute name="NormalLayout" value="" />

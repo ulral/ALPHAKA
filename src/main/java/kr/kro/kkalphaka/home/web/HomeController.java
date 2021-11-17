@@ -88,17 +88,5 @@ public class HomeController {
 		return "alphaka.utils.others";
 	}
 	
-	@RequestMapping(value = "/components/buttons", method = RequestMethod.GET)
-	public String buttons(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
-		
-		return "alphaka.components.buttons";
-	}
-	
-	@RequestMapping(value = "/components/cards", method = RequestMethod.GET)
-	public String cards(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
 
-		return "alphaka.components.cards";
-	}
 }

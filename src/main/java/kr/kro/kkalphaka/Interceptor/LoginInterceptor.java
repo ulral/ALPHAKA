@@ -24,7 +24,7 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
         Object userVO = modelMap.get("userVO");
 
         if(userVO != null){
-            logger.info("new login success");
+            logger.info("로그인에 성공했습니다!");
             session.setAttribute(LOGIN, userVO);
             response.sendRedirect("/kkalphaka");
         }
@@ -37,7 +37,7 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
         HttpSession session = request.getSession();
 
         if(session.getAttribute(LOGIN) != null){
-            logger.info("clear login data before");
+            logger.info("로그인 데이터를 제거합니다.");
             session.removeAttribute(LOGIN);
         }
         return true;

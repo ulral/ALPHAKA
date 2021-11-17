@@ -5,8 +5,9 @@
 <title><tiles:insertAttribute name="title" /></title>
 
 <tiles:insertAttribute name="header" />
+<tiles:insertAttribute name="scripts" />
 
-<body class="bg-gradient-primary">
+    <body class="bg-gradient-primary">
 
 	    <div class="container">
 
@@ -24,7 +25,5 @@
          </div>
          
          </div>
-	
-</body>
+    </body>
 
-	<tiles:insertAttribute name="scripts" />

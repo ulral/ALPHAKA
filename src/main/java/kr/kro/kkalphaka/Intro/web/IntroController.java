@@ -1,4 +1,4 @@
-package kr.kro.kkalphaka.intro.web;
+package kr.kro.kkalphaka.Intro.web;
 
 import kr.kro.kkalphaka.home.web.HomeController;
 import org.slf4j.Logger;

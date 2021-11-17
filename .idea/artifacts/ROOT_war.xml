@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="kkalphaka:war exploded">
+  <artifact type="exploded-war" name="ROOT.war">
     <output-path>$PROJECT_DIR$/target/kkalphaka-1.0.0-BUILD-SNAPSHOT</output-path>
     <properties id="maven-jee-properties">
       <options>

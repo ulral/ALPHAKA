@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
+<!-- 차트 그림 라이브러리 -->
+
+
+
+
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
@@ -23,6 +28,7 @@
                                 <div class="card-body">
                                     <div class="chart-area">
                                         <canvas id="myAreaChart"></canvas>
+                                        <script src="${pageContext.request.contextPath}/resources/js/demo/chart-area-demo.js"></script>
                                     </div>
                                     <hr>
                                     Styling for the area chart can be found in the
@@ -38,6 +44,7 @@
                                 <div class="card-body">
                                     <div class="chart-bar">
                                         <canvas id="myBarChart"></canvas>
+                                        <script src="${pageContext.request.contextPath}/resources/js/demo/chart-bar-demo.js"></script>
                                     </div>
                                     <hr>
                                     Styling for the bar chart can be found in the
@@ -58,6 +65,7 @@
                                 <div class="card-body">
                                     <div class="chart-pie pt-4">
                                         <canvas id="myPieChart"></canvas>
+                                        <script src="${pageContext.request.contextPath}/resources/js/demo/chart-pie-demo.js"></script>
                                     </div>
                                     <hr>
                                     Styling for the donut chart can be found in the

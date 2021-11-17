@@ -24,7 +24,7 @@
 		<property name="logFormatter">
 			<bean class="net.sf.log4jdbc.tools.Log4JdbcCustomFormatter">
 				<property name="loggingType" value="MULTI_LINE" />
-				<property name="sqlPrefix" value="SQL : "/>
+				<property name="sqlPrefix" value="SQL : &#10;&#09;&#09;"/>
 			</bean>
 		</property>
 	</bean>
@@ -39,4 +39,7 @@
 		<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"></constructor-arg>
 	</bean>
 
+	<context:component-scan base-package="kr.kro.kkalphaka">
+		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+	</context:component-scan>
 </beans>

@@ -1,8 +1,5 @@
 package kr.kro.kkalphaka.Login.service;
 
-import kr.kro.kkalphaka.Login.service.UserVO;
-import kr.kro.kkalphaka.Login.service.LoginDTO;
-
 public interface UserService {
 
     /*

@@ -8,4 +8,8 @@
 		<setting name="callSettersOnNulls" value="true"/>
 		<setting name="jdbcTypeForNull" value="NULL"/>
 	</settings>
+
+	<typeAliases>
+		<package name="kr.kro.kkalphaka"></package>
+	</typeAliases>
 </configuration>

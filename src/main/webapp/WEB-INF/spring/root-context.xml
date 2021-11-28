@@ -19,6 +19,7 @@
 		<property name="username" value="root" />
 		<property name="password" value="b00mb00m" />
 	</bean>
+
 	<bean id="dataSource" class="net.sf.log4jdbc.Log4jdbcProxyDataSource">
 		<constructor-arg ref="dataSourceLog" />
 		<property name="logFormatter">
@@ -32,7 +33,7 @@
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="configLocation" value="classpath:/mybatis-config.xml" />
-		<property name="mapperLocations" value="classpath:sqlmap/*Mapper.xml" />
+		<property name="mapperLocations" value="classpath:sqlmap/*_mapper.xml" />
 	</bean>
 
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="clearCache">

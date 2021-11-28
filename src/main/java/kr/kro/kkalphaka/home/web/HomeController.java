@@ -20,7 +20,7 @@ public class HomeController {
 	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Model model) {
-		logger.info("���� �������� �̵��մϴ�.");
+		logger.info("메인 페이지로 이동합니다.");
 		
 		/*
 		Date date = new Date();
@@ -34,7 +34,7 @@ public class HomeController {
 	
 	@RequestMapping(value = "/404", method = RequestMethod.GET)
 	public String err404(Model model) {
-		logger.info("404�������� �̵��մϴ�.");
+		logger.info("404페이지로 이동합니다.");
 		model.addAttribute("result","ALPHAKB");
 		return "alphaka.404";
 	}
@@ -43,50 +43,48 @@ public class HomeController {
 	
 	@RequestMapping(value = "/blank", method = RequestMethod.GET)
 	public String blank(Model model) {
-		logger.info("�ش� �������� �� �������Դϴ�.");
+		logger.info("해당 페이지는 빈 페이지입니다.");
 		
 		return "alphaka.blank";
 	}
 	
 	@RequestMapping(value = "/charts", method = RequestMethod.GET)
-	public String charts(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
+	public String charts(Model model) {
+		logger.info("CHARTS 페이지로 이동합니다.");
 		
 		return "alphaka.charts";
 	}
 	
 	@RequestMapping(value = "/tables", method = RequestMethod.GET)
 	public String tables(Locale locale, @ModelAttribute("msg") String msg) {		
-		logger.info("Welcome home! The client locale is {}.", locale);
+		logger.info("테이블 임시페이지로 이동합니다.");
 		return "alphaka.tables";
 	}
 
 	@RequestMapping(value = "/utils/animations", method = RequestMethod.GET)
-	public String animations(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
+	public String animations(Model model) {
+		logger.info("유틸리티의 애니메이션 페이지로 이동합니다.");
 		
 		return "alphaka.utils.animations";
 	}
 	@RequestMapping(value = "/utils/borders", method = RequestMethod.GET)
-	public String borders(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
+	public String borders(Model model) {
+		logger.info("유틸리티의 보더 페이지로 이동합니다.");
 		
 		return "alphaka.utils.borders";
 	}
 	
 	@RequestMapping(value = "/utils/colors", method = RequestMethod.GET)
-	public String colors(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
+	public String colors(Model model) {
+		logger.info("유틸리티의 컬러 페이지로 이동합니다.");
 		
 		return "alphaka.utils.colors";
 	}
 	
 	@RequestMapping(value = "/utils/others", method = RequestMethod.GET)
-	public String others(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
+	public String others(Model model) {
+		logger.info("유틸리티의 기타 페이지로 이동합니다.");
 		
 		return "alphaka.utils.others";
 	}
-	
-
 }

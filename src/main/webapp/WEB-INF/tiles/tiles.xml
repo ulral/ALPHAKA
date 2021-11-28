@@ -55,49 +55,6 @@
 		<put-attribute name="logout_modal" value="/WEB-INF/views/layout/logout_modal.jsp" />
 	</definition>
 
-	<!-- page-board-tables -->
-	<definition name="alphaka.board.tables" extends="default_sidebar">
-		<put-attribute name="title" value="COIN PPL - 테이블" type="string" />
-		<put-attribute name="sidebar" value="/WEB-INF/views/layout/sidebar.jsp" />
-		<put-attribute name="body" value="/WEB-INF/views/boards/tables.jsp" />
-		<put-attribute name="scroll_up" value="/WEB-INF/views/layout/scroll_up_button.jsp" />
-		<put-attribute name="logout_modal" value="/WEB-INF/views/layout/logout_modal.jsp" />
-	</definition>
-
-	<!-- page-board-tables-regist -->
-	<definition name="alphaka.board.tables.registPage" extends="default_sidebar">
-		<put-attribute name="title" value="COIN PPL - 테이블" type="string" />
-		<put-attribute name="sidebar" value="/WEB-INF/views/layout/sidebar.jsp" />
-		<put-attribute name="body" value="/WEB-INF/views/boards/registPage.jsp" />
-		<put-attribute name="scroll_up" value="/WEB-INF/views/layout/scroll_up_button.jsp" />
-		<put-attribute name="logout_modal" value="/WEB-INF/views/layout/logout_modal.jsp" />
-	</definition>
-
-	<!-- page-board-tables-regist-success -->
-	<definition name="alphaka.board.tables.registSuccess" extends="default_sidebar">
-		<put-attribute name="title" value="COIN PPL - 테이블" type="string" />
-		<put-attribute name="sidebar" value="/WEB-INF/views/layout/sidebar.jsp" />
-		<put-attribute name="body" value="/WEB-INF/views/boards/registSuccess.jsp" />
-		<put-attribute name="scroll_up" value="/WEB-INF/views/layout/scroll_up_button.jsp" />
-		<put-attribute name="logout_modal" value="/WEB-INF/views/layout/logout_modal.jsp" />
-	</definition>
-
-	<!-- components-buttons -->
-	<definition name="alphaka.board.buttons" extends="default_sidebar">
-		<put-attribute name="sidebar" value="/WEB-INF/views/layout/sidebar.jsp" />
-		<put-attribute name="body" value="/WEB-INF/views/boards/buttons.jsp" />
-		<put-attribute name="scroll_up" value="/WEB-INF/views/layout/scroll_up_button.jsp" />
-		<put-attribute name="logout_modal" value="/WEB-INF/views/layout/logout_modal.jsp" />
-	</definition>
-	
-	<!-- components-cards -->
-	<definition name="alphaka.board.cards" extends="default_sidebar">
-		<put-attribute name="sidebar" value="/WEB-INF/views/layout/sidebar.jsp" />
-		<put-attribute name="body" value="/WEB-INF/views/boards/cards.jsp" />
-		<put-attribute name="scroll_up" value="/WEB-INF/views/layout/scroll_up_button.jsp" />
-		<put-attribute name="logout_modal" value="/WEB-INF/views/layout/logout_modal.jsp" />
-	</definition>
-	
 	<!-- utils-animations -->
 	<definition name="alphaka.utils.animations" extends="default_sidebar">
 		<put-attribute name="title" value="COIN PPL - 애니메이션" type="string" />

@@ -10,7 +10,7 @@
       </options>
     </properties>
     <root id="archive" name="kkalphaka-1.0.0-BUILD-SNAPSHOT.war">
-      <element id="artifact" artifact-name="ROOT.war" />
+      <element id="artifact" artifact-name="kkalphaka:war exploded" />
     </root>
   </artifact>
 </component>

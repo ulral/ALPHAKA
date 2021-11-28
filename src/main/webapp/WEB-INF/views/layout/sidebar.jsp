@@ -4,31 +4,22 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="${pageContext.request.contextPath}">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="${pageContext.request.contextPath}/">
             <div class="sidebar-brand-icon rotate-n-15">
                 <img src="${pageContext.request.contextPath}/resources/img/alphaka_logo.png" width="50px;" height="50px;"/>
                 <!-- <i class="fas fa-laugh-wink"></i> -->
             </div>
-            <div class="sidebar-brand-text mx-3">COIN Admin</div>
+            <div class="sidebar-brand-text mx-3">ALPHAKA COIN</div>
         </a>
 
-        <!-- Divider -->
-        <hr class="sidebar-divider my-0">
 
-        <!-- Nav Item - Dashboard -->
-        <li class="nav-item active">
-            <a class="nav-link" href="${pageContext.request.contextPath}">
-                <i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>MAIN</span>
-            </a>
-        </li>
 
         <!-- Divider -->
         <hr class="sidebar-divider">
 
         <!-- Heading -->
         <div class="sidebar-heading">
-            menu
+            메뉴
         </div>
 
         <!-- Nav Item - Pages Collapse Menu -->
@@ -36,14 +27,14 @@
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                 aria-expanded="true" aria-controls="collapseTwo">
                 <i class="fas fa-fw fa-cog"></i>
-                <span>Board</span>
+                <span>게시판</span>
             </a>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Custom Board:</h6>
-                    <a class="collapse-item" href="${pageContext.request.contextPath}/board/tables">Table Board</a>
-                    <a class="collapse-item" href="${pageContext.request.contextPath}/board/buttons">Buttons</a>
-                    <a class="collapse-item" href="${pageContext.request.contextPath}/board/cards">Cards</a>
+                    <h6 class="collapse-header">게시판 종류:</h6>
+                    <a class="collapse-item" href="${pageContext.request.contextPath}/board/tables">테이블 게시판</a>
+                    <a class="collapse-item" href="${pageContext.request.contextPath}/board/buttons">버튼(샘플 페이지)</a>
+                    <a class="collapse-item" href="${pageContext.request.contextPath}/board/cards">카드(샘플 페이지)</a>
                 </div>
             </div>
         </li>
@@ -58,7 +49,7 @@
             <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                 data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">CUSTOM API:</h6>
+                    <h6 class="collapse-header">API 종류:</h6>
                     <a class="collapse-item" href="${pageContext.request.contextPath}/utils/colors">Colors</a>
                     <a class="collapse-item" href="${pageContext.request.contextPath}/utils/borders">Borders</a>
                     <a class="collapse-item" href="${pageContext.request.contextPath}/utils/animations">Animations</a>
@@ -72,14 +63,14 @@
 
         <!-- Heading -->
         <div class="sidebar-heading">
-            Addons
+            에드온
         </div>
 
         <!-- Nav Item - Charts -->
         <li class="nav-item">
             <a class="nav-link" href="${pageContext.request.contextPath}/charts">
                 <i class="fas fa-fw fa-chart-area"></i>
-                <span>Charts</span>
+                <span>차트(샘플페이지)</span>
             </a>
         </li>
 
@@ -87,7 +78,7 @@
         <li class="nav-item">
             <a class="nav-link" href="${pageContext.request.contextPath}/tables">
                 <i class="fas fa-fw fa-table"></i>
-                <span>Tables</span>
+                <span>게시판(샘플페이지)</span>
             </a>
         </li>
 

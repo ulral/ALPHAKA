@@ -4,10 +4,48 @@
 
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/DataTables/datatables.css">
     <script type="text/javascript" charset="utf8" src="${pageContext.request.contextPath}/resources/DataTables/datatables.js"></script>
+    <style>
+        div.container {
+            width: 80%;
+        }
+        .table td {
+            padding: 0.35rem;
+        }
+        .table th {
+            padding: 0.35rem;
+        }
+        .pagination {
+            float: left;
+        }
+    </style>
 
      <script>
+         $.extend( true, $.fn.dataTable.defaults, {
+
+             "ordering": false,
+             "info": false
+         } );
+
          $(document).ready( function () {
              $('#dataTable').DataTable({
+                 "order": [[ 3, "desc" ]],
+                 "pageLength": 25,
+                 "language": {
+                     "emptyTable": "데이터가 없습니다.",
+                     "lengthMenu": "페이지당 _MENU_ 개씩 보기",
+                     "info": "현재 _START_ - _END_ / _TOTAL_건",
+                     "infoEmpty": "데이터 없음",
+                     "infoFiltered": "( _MAX_건의 데이터에서 필터링됨 )",
+                     "search": "검색 : ",
+                     "searchPlaceholder": "검색할 내용...",
+                     "zeroRecords": "일치하는 데이터가 없습니다.",
+                     "loadingRecords": "로딩중...",
+                     "processing": "잠시만 기다려 주세요.",
+                     "paginate": {
+                         "next": "다음",
+                         "previous": "이전",
+                     }
+                 }
              } );
          } );
      </script>
@@ -15,12 +53,9 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Board</h1>
+                    <h1 class="h3 mb-2 text-gray-800">게시판</h1>
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">테이블 게시판</h6>
-                        </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" >
@@ -35,7 +70,9 @@
                                     <tbody>
                                         <c:forEach items="${list}" var="boardVO">
                                             <tr>
-                                                <td>${boardVO.boardTitle}</td>
+                                                <td>
+                                                    <a href="${pageContext.request.contextPath}/board/tables/viewPages?boardId=${boardVO.boardId}">${boardVO.boardTitle}</a>
+                                                </td>
                                                 <td>${boardVO.boardWriter}</td>
                                                 <td>
                                                     <c:choose>
@@ -54,7 +91,7 @@
                                 </table>
                             </div>
                             <div class="my-3"></div>
-                            <a href="${pageContext.request.contextPath}/board/tables/registPage" class="btn btn-primary float-right">
+                            <a href="${pageContext.request.contextPath}/board/tables/registPages" class="btn btn-primary float-right">
                                 <span class="text">게시물 등록</span>
                             </a>
                         </div>

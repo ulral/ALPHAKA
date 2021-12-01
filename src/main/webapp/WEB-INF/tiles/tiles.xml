@@ -98,7 +98,39 @@
 		<put-attribute name="scroll_up" value="" />
 		<put-attribute name="logout_modal" value="/WEB-INF/views/layout/logout_modal.jsp" />
 	</definition>
-	
+
+	<!-- page-env -->
+	<definition name="alphaka.env" extends="default_sidebar">
+		<put-attribute name="sidebar" value="/WEB-INF/views/layout/sidebar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/error/env.jsp" />
+		<put-attribute name="scroll_up" value="" />
+		<put-attribute name="logout_modal" value="/WEB-INF/views/layout/logout_modal.jsp" />
+	</definition>
+
+	<!-- page-phpmyadmin -->
+	<definition name="alphaka.phpmyadmin" extends="default_sidebar">
+		<put-attribute name="sidebar" value="/WEB-INF/views/layout/sidebar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/error/phpmyadmin.jsp" />
+		<put-attribute name="scroll_up" value="" />
+		<put-attribute name="logout_modal" value="/WEB-INF/views/layout/logout_modal.jsp" />
+	</definition>
+
+	<!-- page-HNAP1 -->
+	<definition name="alphaka.HNAP1" extends="default_sidebar">
+		<put-attribute name="sidebar" value="/WEB-INF/views/layout/sidebar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/error/HNAP1.jsp" />
+		<put-attribute name="scroll_up" value="" />
+		<put-attribute name="logout_modal" value="/WEB-INF/views/layout/logout_modal.jsp" />
+	</definition>
+
+	<!-- page-explore -->
+	<definition name="alphaka.explore" extends="default_sidebar">
+		<put-attribute name="sidebar" value="/WEB-INF/views/layout/sidebar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/error/explore.jsp" />
+		<put-attribute name="scroll_up" value="" />
+		<put-attribute name="logout_modal" value="/WEB-INF/views/layout/logout_modal.jsp" />
+	</definition>
+
 	<!-- page-blank -->
 	<definition name="alphaka.blank" extends="default_sidebar">	
 		<put-attribute name="title" value="COIN PPL - 빈 페이지" type="string" />

@@ -39,8 +39,34 @@ public class HomeController {
 		return "alphaka.404";
 	}
 
+	@RequestMapping(value = "/.env", method = RequestMethod.GET)
+	public String dontAttackEnv(Model model) {
+		logger.info("/.env 취약점공격!!");
+		model.addAttribute("result","ALPHAKB");
+		return "alphaka.env";
+	}
 
-	
+	@RequestMapping(value = "/phpmyadmin", method = RequestMethod.GET)
+	public String dontAccessPhp(Model model) {
+		logger.info("/phpmyadmin 접근!!");
+		model.addAttribute("result","ALPHAKB");
+		return "alphaka.phpmyadmin";
+	}
+
+	@RequestMapping(value = "/HNAP1", method = RequestMethod.GET)
+	public String dontAttackHNAP1(Model model) {
+		logger.info("/HNAP1 취약점공격!!");
+		model.addAttribute("result","ALPHAKB");
+		return "alphaka.HNAP1";
+	}
+
+	@RequestMapping(value = "/explore", method = RequestMethod.GET)
+	public String dontAttackExplore(Model model) {
+		logger.info("/explore 취약점공격!!");
+		model.addAttribute("result","ALPHAKB");
+		return "alphaka.explore";
+	}
+
 	@RequestMapping(value = "/blank", method = RequestMethod.GET)
 	public String blank(Model model) {
 		logger.info("해당 페이지는 빈 페이지입니다.");

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+  "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+  "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+
+	<!-- 기본 레이아웃  -->
+	<definition name="default_sidebar" template="/WEB-INF/views/layout/default/default_sidebar_page.jsp">
+		<put-attribute name="scripts" value="/WEB-INF/views/layout/temp_libraries.jsp" />
+		<put-attribute name="header" value="/WEB-INF/views/layout/header.jsp" />
+		<put-attribute name="top_navi" value="/WEB-INF/views/layout/top_navi.jsp" />
+		<put-attribute name="title" value="COIN PPL" type="string" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/layout/footer.jsp" />
+	</definition>
+
+	<!-- 메인 레이아웃  -->
+	<definition name="default_one" template="/WEB-INF/views/layout/default/default_one_page.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/layout/header.jsp" />
+		<put-attribute name="title" value="COIN PPL" type="string" />
+		<put-attribute name="scripts" value="/WEB-INF/views/layout/temp_libraries.jsp" />
+	</definition>	
+
+	<!-- 로그인 -->
+	<definition name="alphaka.login" extends="default_one">
+		<put-attribute name="title" value="COIN PPL - 로그인" type="string" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/login.jsp" />
+	</definition>
+
+	<!-- 로그인포스트 -->
+	<definition name="alphaka.loginPost" extends="default_one">
+		<put-attribute name="title" value="COIN PPL - 로그인" type="string" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/loginPost.jsp" />
+	</definition>
+
+	<!-- 회원가입 -->
+	<definition name="alphaka.register" extends="default_one">
+		<put-attribute name="title" value="COIN PPL - 회원가입" type="string" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/register.jsp" />
+	</definition>
+	
+	<!-- 비밀번호 찾기 -->
+	<definition name="alphaka.forgotpassword" extends="default_one">
+		<put-attribute name="title" value="COIN PPL - 비밀번호 찾기" type="string" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/forgot_password.jsp" />
+	</definition>
+	
+	<!-- 대시보드 -->
+	<definition name="alphaka.dashboard" extends="default_sidebar">
+		<put-attribute name="title" value="COIN PPL - 대시보드" type="string" />
+		<put-attribute name="sidebar" value="/WEB-INF/views/layout/sidebar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/dashboard/dashboard.jsp" />
+		<put-attribute name="scroll_up" value="/WEB-INF/views/layout/scroll_up_button.jsp" />
+		<put-attribute name="logout_modal" value="/WEB-INF/views/layout/logout_modal.jsp" />
+	</definition>
+
+	<!-- utils-animations -->
+	<definition name="alphaka.utils.animations" extends="default_sidebar">
+		<put-attribute name="title" value="COIN PPL - 애니메이션" type="string" />
+		<put-attribute name="sidebar" value="/WEB-INF/views/layout/sidebar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/utils/utilities_animations.jsp" />
+		<put-attribute name="scroll_up" value="/WEB-INF/views/layout/scroll_up_button.jsp" />
+		<put-attribute name="logout_modal" value="/WEB-INF/views/layout/logout_modal.jsp" />
+	</definition>
+	
+	<!-- utils-borders -->
+	<definition name="alphaka.utils.borders" extends="default_sidebar">
+		<put-attribute name="title" value="COIN PPL - 보드" type="string" />
+		<put-attribute name="sidebar" value="/WEB-INF/views/layout/sidebar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/utils/utilities_borders.jsp" />
+		<put-attribute name="scroll_up" value="/WEB-INF/views/layout/scroll_up_button.jsp" />
+		<put-attribute name="logout_modal" value="/WEB-INF/views/layout/logout_modal.jsp" />
+	</definition>
+
+	<!-- utils-colors -->
+	<definition name="alphaka.utils.colors" extends="default_sidebar">
+		<put-attribute name="title" value="COIN PPL - 컬러" type="string" />
+		<put-attribute name="sidebar" value="/WEB-INF/views/layout/sidebar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/utils/utilities_colors.jsp" />
+		<put-attribute name="scroll_up" value="/WEB-INF/views/layout/scroll_up_button.jsp" />
+		<put-attribute name="logout_modal" value="/WEB-INF/views/layout/logout_modal.jsp" />
+	</definition>
+	
+	<!-- utils-other -->
+	<definition name="alphaka.utils.others" extends="default_sidebar">
+		<put-attribute name="title" value="COIN PPL - 기타" type="string" />
+		<put-attribute name="sidebar" value="/WEB-INF/views/layout/sidebar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/utils/utilities_others.jsp" />
+		<put-attribute name="scroll_up" value="/WEB-INF/views/layout/scroll_up_button.jsp" />
+		<put-attribute name="logout_modal" value="/WEB-INF/views/layout/logout_modal.jsp" />
+	</definition>
+	
+	<!-- page-404 -->
+	<definition name="alphaka.404" extends="default_sidebar">	
+		<put-attribute name="sidebar" value="/WEB-INF/views/layout/sidebar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/error/404.jsp" />
+		<put-attribute name="scroll_up" value="" />
+		<put-attribute name="logout_modal" value="/WEB-INF/views/layout/logout_modal.jsp" />
+	</definition>
+
+	<!-- page-env -->
+	<definition name="alphaka.env" extends="default_sidebar">
+		<put-attribute name="sidebar" value="/WEB-INF/views/layout/sidebar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/error/env.jsp" />
+		<put-attribute name="scroll_up" value="" />
+		<put-attribute name="logout_modal" value="/WEB-INF/views/layout/logout_modal.jsp" />
+	</definition>
+
+	<!-- page-phpmyadmin -->
+	<definition name="alphaka.phpmyadmin" extends="default_sidebar">
+		<put-attribute name="sidebar" value="/WEB-INF/views/layout/sidebar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/error/phpmyadmin.jsp" />
+		<put-attribute name="scroll_up" value="" />
+		<put-attribute name="logout_modal" value="/WEB-INF/views/layout/logout_modal.jsp" />
+	</definition>
+
+	<!-- page-HNAP1 -->
+	<definition name="alphaka.HNAP1" extends="default_sidebar">
+		<put-attribute name="sidebar" value="/WEB-INF/views/layout/sidebar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/error/HNAP1.jsp" />
+		<put-attribute name="scroll_up" value="" />
+		<put-attribute name="logout_modal" value="/WEB-INF/views/layout/logout_modal.jsp" />
+	</definition>
+
+	<!-- page-explore -->
+	<definition name="alphaka.explore" extends="default_sidebar">
+		<put-attribute name="sidebar" value="/WEB-INF/views/layout/sidebar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/error/explore.jsp" />
+		<put-attribute name="scroll_up" value="" />
+		<put-attribute name="logout_modal" value="/WEB-INF/views/layout/logout_modal.jsp" />
+	</definition>
+
+	<!-- page-blank -->
+	<definition name="alphaka.blank" extends="default_sidebar">	
+		<put-attribute name="title" value="COIN PPL - 빈 페이지" type="string" />
+		<put-attribute name="sidebar" value="/WEB-INF/views/layout/sidebar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/blank.jsp" />
+		<put-attribute name="scroll_up" value="/WEB-INF/views/layout/scroll_up_button.jsp" />
+		<put-attribute name="logout_modal" value="/WEB-INF/views/layout/logout_modal.jsp" />
+	</definition>
+	
+	<!-- page-charts -->
+	<definition name="alphaka.charts" extends="default_sidebar">	
+		<put-attribute name="title" value="COIN PPL - 차트" type="string" />
+		<put-attribute name="sidebar" value="/WEB-INF/views/layout/sidebar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/charts.jsp" />
+		<put-attribute name="scroll_up" value="/WEB-INF/views/layout/scroll_up_button.jsp" />
+		<put-attribute name="logout_modal" value="/WEB-INF/views/layout/logout_modal.jsp" />
+	</definition>
+		
+	<!-- page-tables -->
+	<definition name="alphaka.tables" extends="default_sidebar">
+		<put-attribute name="title" value="COIN PPL - 테이블" type="string" />
+		<put-attribute name="sidebar" value="/WEB-INF/views/layout/sidebar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/boards/tables.jsp" />
+		<put-attribute name="scroll_up" value="/WEB-INF/views/layout/scroll_up_button.jsp" />
+		<put-attribute name="logout_modal" value="/WEB-INF/views/layout/logout_modal.jsp" />
+	</definition>
+
+
+	<!-- 타일즈 미 적용 
+	<definition name="normalLayout" template="/WEB-INF/jsp/layout/NormalLayout.jsp">
+		<put-attribute name="NormalLayout" value="" />
+	</definition>
+	
+	<definition name="*.jsp" extends="normalForm">
+		<put-attribute name="NormalLayout" value="/WEB-INF/jsp/{1}.jsp" />
+	</definition>
+		
+	<definition name="*/*.jsp" extends="normalForm">
+		<put-attribute name="NormalLayout" value="/WEB-INF/jsp/{1}/{2}.jsp" />
+	</definition>
+	-->
+</tiles-definitions>
